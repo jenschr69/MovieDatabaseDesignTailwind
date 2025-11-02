@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind med hamburgarmeny</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600">MinWebbplats</h1>
+
+        <!-- Desktop meny -->
+        <ul id="nav-links" class="hidden md:flex space-x-6">
+          <li><a href="#" class="hover:text-blue-600">Hem</a></li>
+          <li><a href="#" class="hover:text-blue-600">Tjänster</a></li>
+          <li><a href="#" class="hover:text-blue-600">Om oss</a></li>
+          <li><a href="#" class="hover:text-blue-600">Kontakt</a></li>
+        </ul>
+
+        <!-- Hamburger -->
+        <button id="menu-btn" class="md:hidden p-2 rounded hover:bg-gray-100 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobil meny (dold som standard) -->
+      <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200">
+        <ul class="flex flex-col space-y-2 py-3 px-4 bg-white">
+          <li><a href="#" class="block py-2 hover:text-blue-600">Hem</a></li>
+          <li><a href="#" class="block py-2 hover:text-blue-600">Tjänster</a></li>
+          <li><a href="#" class="block py-2 hover:text-blue-600">Om oss</a></li>
+          <li><a href="#" class="block py-2 hover:text-blue-600">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Bygg något fantastiskt</h2>
+      <p class="text-lg md:text-xl mb-8">Med Tailwind CSS blir design enkelt, snabbt och responsivt.</p>
+      <a href="#"
+        class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+        Kom igång
+      </a>
+    </section>
+
+    <!-- Innehåll -->
+    <section class="max-w-5xl mx-auto px-4 py-16 grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Snabb utveckling</h3>
+        <p>Tailwind låter dig bygga gränssnitt direkt i HTML utan att lämna ditt flöde.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Full kontroll</h3>
+        <p>Anpassa allt via konfiguration eller direkt i klasser – inga begränsningar.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Responsivt direkt</h3>
+        <p>Bygg sidor som fungerar på alla enheter med inbyggda breakpoint-klasser.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-200 py-6 text-center">
+      <p>&copy; 2025 MinWebbplats. Alla rättigheter förbehållna.</p>
+    </footer>
+
+    <!-- JS för hamburgarmenyn -->
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
