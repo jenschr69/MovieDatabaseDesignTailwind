@@ -13,20 +13,18 @@
     <script src="js/scripts.js" defer></script>
   </head>
   <body class="bg-gray-50 text-gray-800">
-    <header>
-      
+    <header class="bg-black">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-white">The Movie Database</h1>
+      </div>
     </header>
     <!-- Navbar -->
     <nav class="bg-white shadow-md">
       <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-blue-600">MinWebbplats</h1>
-
+        
         <!-- Desktop meny -->
         <ul id="nav-links" class="hidden md:flex space-x-6">
           <li><a href="#" class="hover:text-blue-600">Hem</a></li>
-          <li><a href="#" class="hover:text-blue-600">Tjänster</a></li>
-          <li><a href="#" class="hover:text-blue-600">Om oss</a></li>
-          <li><a href="#" class="hover:text-blue-600">Kontakt</a></li>
         </ul>
 
         <!-- Hamburger -->
@@ -43,13 +41,11 @@
       <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200">
         <ul class="flex flex-col space-y-2 py-3 px-4 bg-white">
           <li><a href="#" class="block py-2 hover:text-blue-600">Hem</a></li>
-          <li><a href="#" class="block py-2 hover:text-blue-600">Tjänster</a></li>
-          <li><a href="#" class="block py-2 hover:text-blue-600">Om oss</a></li>
-          <li><a href="#" class="block py-2 hover:text-blue-600">Kontakt</a></li>
         </ul>
       </div>
     </nav>
 
+    <main>
     <!-- Hero -->
     <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
       <h2 class="text-4xl md:text-5xl font-bold mb-4">Bygg något fantastiskt</h2>
@@ -75,6 +71,8 @@
         <p>Bygg sidor som fungerar på alla enheter med inbyggda breakpoint-klasser.</p>
       </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-gray-200 py-6 text-center">
