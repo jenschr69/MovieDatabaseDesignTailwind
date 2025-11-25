@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+  <title>Flex Frontend JS 1 The Movie Database - Jens Christensen - Grit Academy</title>
+  <link rel="icon" type="image/x-icon" href="https://grit.jenschrchristensen.com/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://grit.jenschrchristensen.com/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://grit.jenschrchristensen.com/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://grit.jenschrchristensen.com/img/favicon-16x16.png">
+  <link rel="manifest" href="https://grit.jenschrchristensen.com/img/site.webmanifest">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/scripts.js" defer></script>
+</head>
+<body>
+  <div class="container mx-auto">
+
+  <header class="bg-stone-950 rounded-lg text-white text-3xl p-3 mt-2 mb-2">
+   <h1><a class="text-white" href="../">The Movie Database: Moviesearch</a></h1>
+  </header> 
+  
+  <nav class="bg-stone-950 rounded-lg font-medium text-xl p-3 mb-2">
+    <ul class="inline-flex gap-3">
+      <li><a class="text-white" href="/">Home</a></li>
+      <li><a class="text-white" href="popularmovies/" aria-label="selected">Moviesearch</a></li>
+      <li><a class="text-white" href="popularmovies/">Top 10 Popular Movies</a></li>
+      <li><a class="text-white" href="topratedmovies/" >Top 10 Toprated Movies</a></li>
+    </ul>
+  </nav>
+
+  <main >
+    <!-- Search field with two options: Search by movie title or by person name -->
+    <form  class="bg-white rounded-lg shadow p-3 mb-6 flex flex-row flex-wrap gap-8 items-center" name="myForm">
+      <div class=" border border-gray-300 rounded px-8 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500w-2xl">
+        <input class="" type="text" id="search" name="search" placeholder="Search by movie or person">
+      </div>
+      <div class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <select name="searchBy" id="searchBy"  title="searchBy">
+          <option>Search by...</option>
+          <option selected value="movie">Movie</option>
+          <option value="person">Person</option>
+        </select>
+      </div>
+      <div class="">
+        <button type="submit" id="submit" class="bg-stone-950 text-white rounded px-4 py-2 hover:bg-stone-700 transition">Search</button>
+      </div>
+      <div class="">
+        <button type="reset" class="border border-gray-300 rounded px-4 py-2 hover:bg-stone-300 transition">Reset</button>
+      </div>
+    </form>
+
+    <section id="emptySearchErrorMessage" class="border border-gray-300 rounded hidden mb-2">Null search</section>
+
+    <section id="error" class="border border-gray-300 rounded hidden mb-2">Search error</section>
+
+    <!-- Search result-->
+    <section id="displaySearchResult" class="border border-gray-300 rounded mb-5">
+      <h2 class="p-5 ">Search results</h2>
+    </section>
+
+  </main>
+  <footer class="bg-stone-950 rounded-lg text-white p-3 mb-2">
+    <p>&copy; Flex Frontend JS 1 The Movie Database Jens Christensen - Grit Academy - <a href="https://github.com/jenschr69/Flex-FrontEnd-js1-MovieDB-Jens-Christensen">GitHub Repo</a></p>
+  </footer>
+  </div>
+</body>
+</html>
