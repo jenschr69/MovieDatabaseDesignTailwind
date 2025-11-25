@@ -11,8 +11,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="https://grit.jenschrchristensen.com/img/favicon-16x16.png">
   <link rel="manifest" href="https://grit.jenschrchristensen.com/img/site.webmanifest">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="./css/styles.css">
-  <script src="./js/scripts.js" defer></script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/movies.js" defer></script>
 </head>
 <body>
   <div class="container mx-auto">
@@ -31,18 +31,21 @@
   </nav>
 
   <main >
-    <!-- Search field with two options: Search by movie title or by person name -->
+    <!-- 
+    Search field with two options: Search by movie title or by person name deactivated
+    Instead the api url is only searching by movie title 
+    -->
     <form  class="bg-white rounded-lg shadow p-3 mb-6 flex flex-row flex-wrap gap-8 items-center" name="myForm">
-      <div class=" border border-gray-300 rounded px-8 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500w-2xl">
+      <div class=" border border-gray-300 rounded px-8 py-2 focus:outline-none focus:ring-2 focus:ring-blue-800w-2xl">
         <input class="" type="text" id="search" name="search" placeholder="Search by movie or person">
       </div>
-      <div class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <!-- <div class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         <select name="searchBy" id="searchBy"  title="searchBy">
           <option>Search by...</option>
           <option selected value="movie">Movie</option>
           <option value="person">Person</option>
         </select>
-      </div>
+      </div> -->
       <div class="">
         <button type="submit" id="submit" class="bg-stone-950 text-white rounded px-4 py-2 hover:bg-stone-700 transition">Search</button>
       </div>
